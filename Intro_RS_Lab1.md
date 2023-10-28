@@ -14,7 +14,7 @@ Lab 1 - Getting started with Google Earth Engine
 ### Prerequisites
 -------------
 
-Completion of this lab exercise requires use of the Google Chrome browser and a Google Earth Engine account. If you have not yet signed up - please do so now in a new tab:
+Completion of this lab exercise requires the use of the Google Chrome browser and a Google Earth Engine account. If you have not yet signed up - please do so now in a new tab:
 
 [Earth Engine account registration](https://signup.earthengine.google.com/)
 
@@ -30,7 +30,7 @@ Google Earth Engine uses the JavaScript programming language. We will cover the 
 ### Objective
 ---------
 
-The objective of this lab is to give you an introduction to the Google Earth Engine processing environment. By the end of this exercise you will be able to search, find and visualise a broad range of remotely sensed datasets. We will start with single-band imagery - elevation data from the SRTM mission.
+The objective of this lab is to give you an introduction to the Google Earth Engine processing environment. By the end of this exercise, you will be able to search, find and visualize a broad range of remotely sensed datasets. We will start with single-band imagery - elevation data from the SRTM (Shuttle Radar Topography Mission).
 
 ## 1. The Earth Engine code editor
 
@@ -85,7 +85,7 @@ and make them more accessible, so we appreciate suggestions on which new dataset
 
 ![Figure 5. Rename image](renamesrtm.png)
 
-6. Add the image object to the console by coping the script below into the code editor, and click "run" :
+6. Add the image object to the console by coping the script below into the code editor, and clicking "run" :
 
 ```JavaScript
 print(srtm);
@@ -93,7 +93,7 @@ print(srtm);
 ![Figure 6. Print SRTM](printsrtm.png)
 
 
-7. Browse through the information that was printed to the console. Open the “bands” section to show the one band named “elevation”. Note that all this same information is automatically available for all variables in the Imports section.
+7. Browse through the information that was printed on the console. Open the “bands” section to show the one band named “elevation”. Note that all this same information is automatically available for all variables in the Imports section.
 
 ![Figure 7. SRTM in console](bandssrtm.png)
 
@@ -126,7 +126,7 @@ Map.addLayer(srtm, {min: 0, max: 300}, 'Elevation above sea level');
 ```
 ![Figure 10. Rename title](title2srtm.png)
 
-10. Now the last step for today is to save your code, however before doing that it is good practice to add a some comment lines to your code reminding you of what you did and why. We add these with two forward slashes // :
+10. Now the last step for today is to save your code, however before doing that it is good practice to add some comment lines to your code reminding you of what you did and why. We add these with two forward slashes // :
 
 ```Javascript
 // Print data details to console
@@ -135,10 +135,10 @@ print(srtm);
 // Add the SRTM data to the interactive map
 Map.addLayer(srtm)
 
-// Add the data again, but with rescrited value ranges for better visualisation
+// Add the data again, but with restricted value ranges for better visualization
 Map.addLayer(srtm, {min: 0, max: 300})
 
-// Add the data again, with value ranges, and a useful title for teh Layer tab
+// Add the data again, with value ranges, and a useful title for the Layer tab
 Map.addLayer(srtm, {min: 0, max: 300}, 'Elevation above sea level');
 ```
 ![Figure 11. Comment script](commentsrtm.png)
@@ -147,7 +147,7 @@ Map.addLayer(srtm, {min: 0, max: 300}, 'Elevation above sea level');
 
 ![Figure 12. Comment script](savesrtm.png)
 
-12. If you would like to experiment with different colour combinations, you can play with colour palettes as per the example below:
+12. If you would like to experiment with different color combinations, you can play with color palettes as per the example below:
 
 ```Javascript
 Map.addLayer(srtm, {min: 0, max: 300, palette: ['blue', 'yellow', 'red']}, 'Elevation above sea level');
@@ -155,7 +155,7 @@ Map.addLayer(srtm, {min: 0, max: 300, palette: ['blue', 'yellow', 'red']}, 'Elev
 
 ![Figure 13. Colour scale elevation](coloursrtm.png)
 
-13. For better visualisation we can create a hillshade view of the elevation data. Remember you can use the Layer transparency options to create draped images for colourised hillshades.
+13. For better visualization we can create a hillshade view of the elevation data. Remember you can use the Layer transparency options to create draped images for colourised hillshades.
 
 ```JavaScript
 var hillshade = ee.Terrain.hillshade(srtm);
