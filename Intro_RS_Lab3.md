@@ -162,6 +162,8 @@ Paste the following lines below the ones you’ve already added, and click "Run"
 // Define custom visualization color parameters 
 Map.addLayer(NDVI, {min: 0, max: 1, palette: ['yellow', 'green']}, 'NDVI with different color combinations');
 ```
+
+17. Please save your current script by clicking the drop down on the Save button, and selecting "Save as". Save it into your course repository so that you can come back to it at any stage, and from any device with a web browser.
 ----
 ### Practical exercise
 
