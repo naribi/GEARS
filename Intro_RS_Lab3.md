@@ -157,7 +157,11 @@ Paste the following lines below the ones you’ve already added, and click "Run"
 
 15. Explore different parts of the image and see how NDVI values vary with different substrate types.
 
-
+16. If you would like to experiment with different color combinations, you can play with color palettes as per the example below:
+```JavaScript
+// Define custom visualization color parameters 
+Map.addLayer(NDVI, {min: 0, max: 1, palette: ['yellow', 'green']}, 'NDVI with different color combinations');
+```
 ----
 ### Practical exercise
 
