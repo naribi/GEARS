@@ -159,7 +159,7 @@ Map.addLayer(srtm, {min: 0, max: 300, palette: ['blue', 'yellow', 'red']}, 'Elev
 
 ```JavaScript
 var hillshade = ee.Terrain.hillshade(srtm);
-Map.addLayer(hillshade, {min: 150, max:255}, 'Hillshade');
+Map.addLayer(hillshade, {min: 150, max:255}, 'Hillshade Texture map');
 ```
 
 ![Figure 14. Hillshade view](hillsrtm.png)
