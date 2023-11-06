@@ -32,15 +32,17 @@ This lab follows on from others in this series:
 
 ### Objective
 
+The objective of this lab is to deepen your understanding of the image classification process and enhance last week's classification. 
 
-The objective of this lab is to enhance your understanding of the image classification process and improve upon the classification from last week.
 
 ----------
 
 ## Load up your previous classification from last week
 
-Open your script from last week's lab. If you did not save it, repeat the steps from [Lab 4](https://github.com/geospatialeco/GEARS/blob/master/Intro_RS_Lab4.md) and be sure to save it this time.
-
+To begin, we'll load your previous classification. Hopefully, you saved your project last week. 
+If you did not save it, repeat the steps from [Lab 4](https://github.com/geospatialeco/GEARS/blob/master/Intro_RS_Lab4.md) and be sure to save it this time. 
+You might recall that we created various geometries, including a Region of Interest (ROI) used as a spatial filter to locate our image. 
+Subsequently, we established four land cover classes, each containing 25 points. 
 I have provided the full code below, but remember that you need to manually collect the training data and assign landcover properties.
 
 ```JavaScript
