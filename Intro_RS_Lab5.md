@@ -103,6 +103,7 @@ To proceed, we will revisit the import section where the four classes (agricultu
 The next step involves redefining these classes using a new tool - the rectangle tool. This tool enables us to draw shapes (rectangles, in this case) directly in Earth Engine. 
 By clicking four times, we'll create the four necessary geometries using the same naming convention as last week: urban, water, forests, and agriculture. 
 While doing this, we'll also adjust these settings to refine our classification.
+![Figure 2. Classified map](screenshots/15-Add-Polygons-and-change-Classification-Algo.png)
 4. Change the classifier. We used a CART classifier, we could try a different approach such as a support vector machine (SVM) or randomForest (randomForest) approach.
 5. Change the bands. We could add ancillary information, such as elevation data, or a derived index such as NDVI to provide for information for class discrimination.
 6. Change the image. We used a winter scene from Landsat-8. We could try a summer scene, or switch to a Sentinel-2 image.
