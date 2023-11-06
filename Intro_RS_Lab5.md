@@ -23,10 +23,10 @@ https://code.earthengine.google.com
 
 This lab follows on from others in this series:
 
-[Lab 1](https://github.com/geospatialeco/GEARS/blob/master/Intro_RS_Lab1.md) -
-[Lab 2](https://github.com/geospatialeco/GEARS/blob/master/Intro_RS_Lab2.md) -
-[Lab 3](https://github.com/geospatialeco/GEARS/blob/master/Intro_RS_Lab3.md) -
-[Lab 4](https://github.com/geospatialeco/GEARS/blob/master/Intro_RS_Lab4.md)
+[Lab 1](https://github.com/naribi/GEARS/blob/master/Intro_RS_Lab1.md) -
+[Lab 2](https://github.com/naribi/GEARS/blob/master/Intro_RS_Lab2.md) -
+[Lab 3](https://github.com/naribi/GEARS/blob/master/Intro_RS_Lab3.md) -
+[Lab 4](https://github.com/naribi/GEARS/blob/master/Intro_RS_Lab4.md)
 
 ------------------------------------------------------------------------
 
@@ -40,7 +40,7 @@ The objective of this lab is to deepen your understanding of the image classific
 ## Load up your previous classification from last week
 
 To begin, we'll load your previous classification. Hopefully, you saved your project last week. 
-If you did not save it, repeat the steps from [Lab 4](https://github.com/geospatialeco/GEARS/blob/master/Intro_RS_Lab4.md) and be sure to save it this time. 
+If you did not save it, repeat the steps from [Lab 4](https://github.com/naribi/GEARS/blob/master/Intro_RS_Lab4.md) and be sure to save it this time. 
 You might recall that we created various geometries, including a Region of Interest (ROI) used as a spatial filter to locate our image. 
 Subsequently, we established four land cover classes, each containing 25 points. 
 I have provided the full code below, but remember that you need to manually collect the training data and assign landcover properties.
