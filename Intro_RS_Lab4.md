@@ -118,7 +118,7 @@ After running the script the training data will be printed to the console. You w
 Now we can train the classifier algorithm by using our examples of what different landcover classes look like from a multi-spectral perspective.
 
 ```javascript
-var classifier = ee.Classifier.cart().train({
+var classifier = ee.Classifier.smileCart().train({
   features: training,
   classProperty: 'landcover',
   inputProperties: bands
