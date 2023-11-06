@@ -115,7 +115,7 @@ After running the script the training data will be printed to the console. You w
 
 ## Train the classifier and run the classification
 
-Now we can train the classifier algorithm by using our examples of what different landcover classes look like from a multi-spectral perspective.
+Now we can train the 'Cart' classifier algorithm by using our examples of what different landcover classes look like from a multi-spectral perspective. Note that you can try out other algorithms by searching for them in the 'Doc' tab using the following string: 'ee.Classifier.'.
 
 ```javascript
 var classifier = ee.Classifier.smileCart().train({
