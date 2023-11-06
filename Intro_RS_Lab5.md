@@ -102,11 +102,14 @@ Utilizing polygons allows for a more comprehensive representation by encompassin
 To proceed, we will revisit the import section where the four classes (agriculture, forests, water, and urban) were defined, and remove them in order to make these adjustments.
 The next step involves redefining these classes using a new tool - the rectangle tool. This tool enables us to draw shapes (rectangles, in this case) directly in Earth Engine. 
 By clicking four times, we'll create the four necessary geometries using the same naming convention as last week: urban, water, forests, and agriculture. 
-While doing this, we'll also adjust these settings to refine our classification.
-![Figure 2. Classified map](screenshots/l5-Add-Polygons-and-change-Classification-Algo.png)
+While doing this, we'll also adjust these settings to refine our classification (i.e. the same FeatureCollection).
+![Figure 2. SamplingPolygons](screenshots/l5-SamplingPolygons.png)
+
 4. Change the classifier. We used a CART classifier, we could try a different approach such as a support vector machine (SVM) or randomForest (randomForest) approach.
-5. Change the bands. We could add ancillary information, such as elevation data, or a derived index such as NDVI to provide for information for class discrimination.
-6. Change the image. We used a winter scene from Landsat-8. We could try a summer scene, or switch to a Sentinel-2 image.
+![Figure 3. Classification algrorithms](screenshots/l5-Add-Polygons-and-change-Classification-Algo.png)
+   
+6. Change the bands. We could add ancillary information, such as elevation data, or a derived index such as NDVI to provide for information for class discrimination.
+7. Change the image. We used a winter scene from Landsat-8. We could try a summer scene, or switch to a Sentinel-2 image.
 
 
 -------
