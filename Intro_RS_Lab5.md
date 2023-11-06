@@ -110,7 +110,9 @@ While doing this, we'll also adjust these settings to refine our classification 
 ![Figure 3. Classification algrorithms](screenshots/l5-Add-Polygons-and-change-Classification-Algos.png)
    
 5. Change the bands. We could add ancillary information, such as elevation data, or a derived index such as NDVI to provide for information for class discrimination.
-6. Change the image. We used a winter scene from Landsat-8. We could try a summer scene, or switch to a Sentinel-2 image.
+6. Consider changing the image dataset used for classification. For instance, we previously employed a winter scene from Landsat-8, but it could be valuable to explore a summer scene or switch to a Sentinel-2 image.
+I encourage you to attempt a classification using a Sentinel-2 image. You can apply the same code used for the previous analysis, simplifying the process for Sentinel-2 images. It's important to note a few distinctions: the metadata property for Sentinel-2 is labeled as 'cloud coverage assessment,' differing from 'cover.' Additionally, utilizing Sentinel-2 will provide higher spatial resolution and additional bands.
+Your main task for this lab session is to replicate the classification process using a Sentinel-2 image. This exercise will enable you to investigate the disparities and advantages of working with Sentinel-2 compared to your prior classification work.
 
 
 -------
