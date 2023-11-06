@@ -94,10 +94,18 @@ Map.addLayer(classified,
 We ended last week with a discussion on whether or not we were happy with this classification. Even without any quantitative data, it was clearly lacking in some regions. How can we improve it? There are a few options we can explore:
 
 1. Change the training sample size. We only sampled 25 pixels per class. This was a lot of clicking, but we could use polygons instead of points to sample more pixels for training.
-2. Change the sampling strategy. We collected an even number of points per class, but some landcover classes cover much more area than others. We could experiment with a stratified sampling approach instead.
-3. Change the classifier. We used a CART classifier, we could try a different approach such as a support vector machine (SVM) or randomForest (randomForest) approach.
-4. Change the bands. We could add ancillary information, such as elevation data, or a derived index such as NDVI to provide for information for class discrimination.
-5. Change the image. We used a winter scene from Landsat-8. We could try a summer scene, or switch to a Sentinel-2 image.
+2. Remember that in our previous session, our focus was primarily on learning how to sample training data and execute the classification. Now, we have various options to refine our methodology.
+Let's consider a change in our sampling strategy. Although we collected the same number of points per class, some landcover classes represent a much larger area than others. 
+An initial adjustment we could make involves reevaluating the training sample size. Initially, we selected 25 pixels per class, a process that demanded a significant amount of clicking. 
+A more efficient alternative involves using polygons instead of points. 
+Utilizing polygons allows for a more comprehensive representation by encompassing a larger area, thus significantly enhancing the diversity within our training dataset.
+To proceed, we will revisit the import section where the four classes (agriculture, forests, water, and urban) were defined, and remove them in order to make these adjustments.
+The next step involves redefining these classes using a new tool - the rectangle tool. This tool enables us to draw shapes (rectangles, in this case) directly in Earth Engine. 
+By clicking four times, we'll create the four necessary geometries using the same naming convention as last week: urban, water, forests, and agriculture. 
+While doing this, we'll also adjust these settings to refine our classification.
+4. Change the classifier. We used a CART classifier, we could try a different approach such as a support vector machine (SVM) or randomForest (randomForest) approach.
+5. Change the bands. We could add ancillary information, such as elevation data, or a derived index such as NDVI to provide for information for class discrimination.
+6. Change the image. We used a winter scene from Landsat-8. We could try a summer scene, or switch to a Sentinel-2 image.
 
 
 -------
