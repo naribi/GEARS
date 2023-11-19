@@ -34,14 +34,14 @@ This lab follows on from others in this series:
 ### Objective
 
 
-The objective of this lab is to further your understanding of spectral responses, and develop skills in using the Charting functions in Earth Engine (JavaScript).
+This lab aims to further your understanding of spectral responses and develop skills in using the Charting functions in Earth Engine (JavaScript).
 
 ----------
 
 ## Load up a Landsat-8 scene
 1. Navigate to an area of interest for you.
 2. Place a point marker on the map and rename it "roi".
-3. Run the code below to pull up a cloud free image for a specific date range (adjust as needed).
+3. Run the code below to pull up a cloud-free image for a specific date range (adjust as needed).
 
 
 ```JavaScript
@@ -56,13 +56,13 @@ var image = ee.Image(ee.ImageCollection('LANDSAT/LC08/C01/T1_SR')
 Map.addLayer(image, {bands: ['B4', 'B3', 'B2'],min:0, max: 3000}, 'True colour image');
 ```
 
-First we will specify which bands to use, and create new polygons Using the (rectangle tool) for three classes (Water, Forest, City) we want to explore.
+First, we will specify which bands to use, and create new polygons Using the (rectangle tool) for the three classes (Water, Forest, City) we want to explore.
 
 ![Figure 1. Make rectangle polygons](screenshots/l5_poly.png)
 
 
 
-Change the geometry type to Feature and and define a 'label' in the properties tab.
+Change the geometry type to Feature and define a 'label' in the properties tab.
 
 ![Figure 2. Defining Feature and Labels](screenshots/l5_feature.png)
 
@@ -72,7 +72,7 @@ var subset = image.select('B[1-7]')
 var samples = ee.FeatureCollection([Water,Forest,City]);
 ```
 
-Now we can create a chart variable and then print it to the console. We use the image.regions function to summarise by class region, and the ee.Reducer.mean() function to obtain the mean reflectance value for each class for each band.
+Now we can create a chart variable and then print it to the console. We use the **image.regions** function to summarise by class region, and the **ee.Reducer.mean()** function to obtain the mean reflectance value for each class for each band.
 
 
 ```JavaScript
