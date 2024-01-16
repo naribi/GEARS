@@ -70,7 +70,7 @@ var training = image.select(bands).sampleRegions({
 });
 
 //Train the classifier - in this case using a CART regression tree
-var classifier = ee.Classifier.cart().train({
+var classifier = ee.Classifier.smileCart().train({
   features: training,
   classProperty: 'landcover',
   inputProperties: bands
