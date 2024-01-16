@@ -83,7 +83,7 @@ print(training);
 
 ```JavaScript
 //Train classifier - e.g. cart, randomForest, svm
-var classifier = ee.Classifier.cart().train({
+var classifier = ee.Classifier.smileCart().train({
   features: training,
   classProperty: 'landcover',
   inputProperties: bands
