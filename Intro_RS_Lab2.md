@@ -82,7 +82,7 @@ Map.addLayer(sent2,{bands:['B4','B3','B2']});
 
 ![Figure 6. First RGB](L2_rgb.png)
 
-9. After running the previous line of code, we can see that an image loads in the map viewer but it is completely dark. This is because we did not specify any visualisation parameters. Reflectance values for Sentinel-2 products range from 0 to 3000, so let's specify this in our code like shown below (noting that all visualisation parameters are inside the {} brackets):
+9. After running the previous line of code, we can see that an image loads in the map viewer but it is completely dark. This is because we did not specify any visualisation parameters. Reflectance values for Sentinel-2 products range from 0 to 3000, so let's specify this in our code like shown below (noting that all visualisation parameters are inside the {} braces):
 
 
 ```JavaScript
