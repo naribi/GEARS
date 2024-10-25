@@ -30,12 +30,12 @@ Google Earth Engine uses the JavaScript programming language. We will cover the 
 ### Objective
 
 
-The objective of this lab is to strengthen your understanding of image visualisation principles, and develop practical skills in mapping band combinations and exploring reflectance properties of surface elements.
+The objective of this lab is to strengthen your understanding of image visualization principles and develop practical skills in mapping band combinations and exploring reflectance properties of surface elements.
 
 
 ## Loading a Sentinel-2 multispectral image
 
-1. For this lab we will use a multi-spectral image collected by the European Space Agency's Sentinel-2 satellite. Sentinel-2 is a wide-swath, high-resolution, multi-spectral imaging mission supporting Copernicus Land Monitoring studies, including the monitoring of vegetation, soil and water cover, as well as observation of inland waterways and coastal areas. We will use an image collected over Kakadu National Park, Australia.
+1. For this lab we will use a multi-spectral image collected by the European Space Agency's Sentinel-2 satellite. Sentinel-2 is a wide-swath, high-resolution, multi-spectral imaging mission supporting Copernicus Land Monitoring studies, including the monitoring of vegetation, soil and water cover, as well as observation of inland waterways and coastal areas. We will use an image collected from Kakadu National Park, Australia.
 
 2. Let's navigate to the area of interest (Kakadu) by copying the code below into the Code Editor and clicking "Run". Remember that the line starting with // is a note to ourselves and to others, and is not processed (we call this a comment). The numbers in brackets are the longitude, latitude, and zoom level (range is from 1 to 22).
 
@@ -46,14 +46,14 @@ Map.setCenter(132.5685, -12.6312, 8);
 
 ![Figure 1. Navigate to Kakadu](L2_kakadu.png)
 
-3. Now that we are in the right place, let's choose a Sentinel-2 image using the code below. Copy and paste into the Code Editor and click "Run". Copernicus refers to the satellite mission, S2 is short for Sentinel-2, and the long number 20180422T012719_20180422T012714_T52LHM refers to a specific image, defined by a date, time and a path and row of the satellite's orbit. I have chosen a single image for the purposes of this lab, but we will cover searching for images for specific areas and dates at a later stage.
+3. Now that we are in the right place, let's choose a Sentinel-2 image using the code below. Copy and paste into the Code Editor and click "Run". Copernicus refers to the satellite mission, S2 is short for Sentinel-2, and the long number 20180422T012719_20180422T012714_T52LHM refers to a specific image, defined by a date, time and a path and row of the satellite's orbit. I have chosen a single image for this lab, but we will cover searching for images for specific areas and dates at a later stage.
 
 ```JavaScript
 // Select a specific Sentinel-2 image from the archive
 var sent2 = ee.Image("COPERNICUS/S2/20180422T012719_20180422T012714_T52LHM");
 ```
 
-4. If the code did not return any errors, then the image was successfully found in the archive. To double check, let's run the line below to print the image information to the Console. Once the information loads in the Console, you can click the little dropdown arrows next to "Image" and "bands" to see more details about the band structure and naming format.
+4. If the code did not return any errors, then the image was successfully found in the archive. To double-check, let's run the line below to print the image information to the Console. Once the information loads in the Console, you can click the little dropdown arrows next to "Image" and "bands" to see more details about the band structure and naming format.
 
 ```JavaScript
 // Print image details to the Console
@@ -74,7 +74,7 @@ print(sent2);
 
 ![Figure 5. Save your script](L2_save.png)
 
-8. Getting back to our image, Bands 2,3 and 4 are the blue, green and red bands respectively. Therefore if we wish to view a true-colour rendering of the image - i.e. an RGB composite, we need to place Band 4 into the red channel, Band 3 into the green channel, and Band 2 into the blue channel. We can do this with the code below - take careful note of the syntax for specifying the band arrangement.
+8. Getting back to our image, Bands 2,3 and 4 are the blue, green and red bands respectively. Therefore if we wish to view a true-color rendering of the image - i.e. an RGB composite, we need to place Band 4 into the red channel, Band 3 into the green channel, and Band 2 into the blue channel. We can do this with the code below - take careful note of the syntax for specifying the band arrangement.
 
 ```JavaScript
 Map.addLayer(sent2,{bands:['B4','B3','B2']});
@@ -82,7 +82,7 @@ Map.addLayer(sent2,{bands:['B4','B3','B2']});
 
 ![Figure 6. First RGB](L2_rgb.png)
 
-9. After running the previous line of code, we can see that an image loads in the map viewer but it is completely dark. This is because we did not specify any visualisation parameters. Reflectance values for Sentinel-2 products range from 0 to 3000, so let's specify this in our code like shown below (noting that all visualisation parameters are inside the {} braces):
+9. After running the previous line of code, we can see that an image loads in the map viewer but it is completely dark. This is because we did not specify any visualization parameters. Reflectance values for Sentinel-2 products range from 0 to 3000, so let's specify this in our code like shown below (noting that all visualization parameters are inside the {} braces):
 
 
 ```JavaScript
@@ -91,13 +91,13 @@ Map.addLayer(sent2,{bands:['B4','B3','B2'], min:0, max:3000});
 
 ![Figure 6. Second RGB](L2_rgb2.png)
 
-10. That looks better, this is a view similar to what we would see looking out of the window of an airplane - which is why we call it a true-colour composite. All three of the bands used in creating this composite occur in the visible portion of the electromagnetic spectrum.
+10. That looks better, this is a view similar to what we would see looking out of the window of an airplane - which is why we call it a true-color composite. All three of the bands used in creating this composite occur in the visible portion of the electromagnetic spectrum.
 
 11. Zoom in a bit closer using the wheel of your mouse. These images are a fantastic resource for environmental mapping and monitoring. The visible spectrum bands are at 10m spatial resolution, and the revisit time of the satellite constellation is every 6 days in this region. Thanks ESA!
 
 ![Figure 7. Zoomed RGB](L2_rgb3.png)
 
-12. Before we go any further lets clean up our code a bit. We didn't comment the last two lines - let's fix that, and let's give titles to the layers in the map view so that we know which is which in the layer tab. We can paste these lines over the previous two.
+12. Before we go any further let us clean up our code a bit. We didn't comment on the last two lines - let's fix that, and let's give titles to the layers in the map view so that we know which is which in the layer tab. We can paste these lines over the previous two.
 
 ```JavaScript
 // Add RGB composite to map, without parameters defined
@@ -108,7 +108,7 @@ Map.addLayer(sent2,{bands:['B4','B3','B2'], min:0, max:3000}, "True-colour");
 ```
 ![Figure 8. Layer titles](L2_titles.png)
 
-13. If look back to the table of Sentinel-2 wavelengths, we can see that Band 8 is in the NIR (near infra-red) spectrum. Therefore, to map a false-colour composite we need to put Band 8 into the red channel, move Band 4 into the green channel, and move Band 3 into the blue channel. The resulting image now shows photosynthetically active vegetation in vibrant red.
+13. If look back to the table of Sentinel-2 wavelengths, we can see that Band 8 is in the NIR (near infra-red) spectrum. Therefore, to map a false-color composite we need to put Band 8 into the red channel, move Band 4 into the green channel, and move Band 3 into the blue channel. The resulting image now shows photosynthetically active vegetation in vibrant red.
 
 ```JavaScript
 // Add RGB composite to map, using NIR for false-colour
@@ -116,7 +116,7 @@ Map.addLayer(sent2,{bands:['B8','B4','B3'], min:0, max:3000}, "False-colour");
 ```
 ![Figure 9. False-colour composite](L2_falseNIR.png)
 
-14. Now you can navigate around the scene and flip between the true-colour and false-colour views using the layers tab. Take careful note of how different parts of the scene are represented in these different visualisations - and explore how some features, like burn scars, jump out more clearly in the false-colour composite.
+14. Now you can navigate around the scene and flip between the true-colour and false-colour views using the layers tab. Take careful note of how different parts of the scene are represented in these different visualizations - and explore how some features, like burn scars, jump out more clearly in the false-color composite.
 
 ![Figure 10. Flip between layers](L2_colour2.gif)
 
@@ -147,7 +147,7 @@ Map.addLayer(sent2,{bands:['B12'], min:0, max:3000}, "B12");
 // Select a specific Sentinel-2 image from the archive
 var sent2dry = ee.Image("COPERNICUS/S2/20180810T012709_20180810T012711_T52LHM");
 ```
-2. Visualise this image in true-colour and false-colour.
+2. Visualise this image in true colour and false colour.
 
 3. Compare the August image with the one from April. What has changed and why?
 
