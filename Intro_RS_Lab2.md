@@ -2,12 +2,12 @@
 GEARS - Geospatial Ecology and Remote Sensing lab - https://www.gears-lab.com
 
 # Introduction to Remote Sensing of the Environment
-Lab 2 - Understanding band combinations and image visualisations
+Lab 2 - Understanding band combinations and image visualizations
 --------------
 
 ### Acknowledgments
 - Google Earth Engine Team
-- Google Earth Engine Developers group
+- Google Earth Engine Developers Group
 
 ------
 
